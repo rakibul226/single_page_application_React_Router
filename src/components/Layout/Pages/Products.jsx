@@ -6,6 +6,7 @@ import Card from "./Card";
 const Products = () => {
 
     const {products}= useLoaderData();
+    
 
     return (
         

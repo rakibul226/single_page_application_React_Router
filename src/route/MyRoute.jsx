@@ -3,6 +3,7 @@ import MainLayOut from "../components/Layout/MainLayOut";
 import Home from "../components/Layout/Pages/Home";
 import Products from "../components/Layout/Pages/Products";
 import Dashboard from "../components/Layout/Pages/Dashboard";
+import ProductDetails from "../components/Layout/Pages/ProductDetails";
 
 const MyRoute = createBrowserRouter([
     {
@@ -17,6 +18,11 @@ const MyRoute = createBrowserRouter([
             path:"/products",
             element:<Products></Products>,
             loader : ()=> fetch('https://dummyjson.com/products')
+        },
+        {
+            path:'/products/:id',
+            element:<ProductDetails></ProductDetails>,
+            loader : ({params})=> fetch(`https://dummyjson.com/products/${params.id}`)
         },
         {
             path:"/dashboard",
