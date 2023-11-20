@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import '../CSS/mycss.css'
 
 const Navbar = () => {
     return (
@@ -7,18 +9,11 @@ const Navbar = () => {
                     <h1 className="text-5xl">
                         <Link to={`/`}>Amajhon</Link>
                     </h1></div>
-                <nav>
-                    <ul className="flex gap-5 text-3xl">
-                        <li>
-                            <Link to={`/`}>Home</Link>
-                        </li>
-                        <li>
-                            <Link to={`/products`}>Product</Link>
-                        </li>
-                        <li>
-                            <Link to={`/dashboard`}>Dashboard</Link>
-                        </li>
-                    </ul>
+
+                <nav className="flex gap-5 text-3xl">                    
+                    <NavLink to={`/`}>Home</NavLink>                                              
+                    <NavLink to={`/products`}>Product</NavLink>                                      
+                    <NavLink to={`/dashboard`}>Dashboard</NavLink>                                       
                 </nav>
            </div>
     );
