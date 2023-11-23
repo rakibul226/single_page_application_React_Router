@@ -4,6 +4,8 @@ import Home from "../components/Layout/Pages/Home";
 import Products from "../components/Layout/Pages/Products";
 import Dashboard from "../components/Layout/Pages/Dashboard";
 import ProductDetails from "../components/Layout/Pages/ProductDetails";
+import Profile from "../components/Layout/Dashboard/profile";
+import EditProfile from "../components/Layout/Dashboard/EditProfile";
 
 const MyRoute = createBrowserRouter([
     {
@@ -26,7 +28,21 @@ const MyRoute = createBrowserRouter([
         },
         {
             path:"/dashboard",
-            element:<Dashboard></Dashboard>
+            element:<Dashboard></Dashboard>,
+            children : [
+              {
+                path:"/dashboard",
+                element:<Dashboard></Dashboard>
+              },
+              {
+                path:"dashboard/profile",
+                element:<Profile></Profile>
+              },
+              {
+                path:"dashboard/editprofile",
+                element:<EditProfile></EditProfile>
+              },
+            ]
         }
       ]
     },

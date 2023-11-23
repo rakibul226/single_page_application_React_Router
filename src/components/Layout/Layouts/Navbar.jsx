@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className="flex justify-between px-10 mb-6 py-7 shadow-md">
                 <div>
                     <h1 className="text-5xl">
-                        <Link to={`/`}>Amajhon</Link>
+                        <Link to={`/`}> Amazzon</Link>
                     </h1></div>
 
                 <nav className="flex gap-5 text-3xl">                    
